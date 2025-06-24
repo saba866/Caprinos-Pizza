@@ -199,21 +199,19 @@
             background-color: #c1121f;
         }
     </style>
-</head>
-<body>
-<!-- OneSignal Push Notification -->
-<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
 <script>
-  window.OneSignal = window.OneSignal || [];
-  OneSignal.push(function() {
-    OneSignal.init({
-      appId: "YOUR-ONESIGNAL-APP-ID", // Replace with your actual OneSignal App ID
-      notifyButton: {
-        enable: true, // Show small bell icon on bottom-right
-      },
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "345e509f-1323-4d7e-ab8d-302f981db0a6",
     });
   });
 </script>
+</head>
+
+<body>
+
 
     <!-- Sticky Header -->
     <header class="sticky-header fixed w-full z-50 py-4 transition-all duration-300">
