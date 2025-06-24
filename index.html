@@ -201,6 +201,20 @@
     </style>
 </head>
 <body>
+<!-- OneSignal Push Notification -->
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "YOUR-ONESIGNAL-APP-ID", // Replace with your actual OneSignal App ID
+      notifyButton: {
+        enable: true, // Show small bell icon on bottom-right
+      },
+    });
+  });
+</script>
+
     <!-- Sticky Header -->
     <header class="sticky-header fixed w-full z-50 py-4 transition-all duration-300">
         <div class="container mx-auto px-6">
